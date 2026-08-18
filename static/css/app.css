@@ -918,7 +918,7 @@ label.error {
   transition-duration: 0s;
   transition-delay: 0.8s; }
 
-.swiper-container.greater-than-one .swiper-pagination {
+.swiper.greater-than-one .swiper-pagination {
   opacity: 1; }
 
 .swiper-pagination-bullet {
@@ -939,10 +939,10 @@ label.error {
 .swiper-pagination-bullet:first-child {
   display: none; }
 
-.swiper-container-vertical > .swiper-pagination-bullets .swiper-pagination-bullet:first-child {
+.swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet:first-child {
   display: none; }
 
-.swiper-container-vertical > .swiper-pagination-bullets {
+.swiper-vertical > .swiper-pagination-bullets {
   right: 20px; }
 
 .swiper-pagination-bullet:last-child {
@@ -967,10 +967,10 @@ label.error {
   /*width: 110%;*/
   width: 100%; }
 
-.swiper-container.initd .swiper-slide {
+.swiper.initd .swiper-slide {
   transition-delay: 0.8s; }
 
-.swiper-container-horizontal > .swiper-pagination-bullets {
+.swiper-horizontal > .swiper-pagination-bullets {
   width: 100vh;
   left: auto;
   right: 50px;
@@ -978,11 +978,11 @@ label.error {
   transform: rotate(90deg);
   transform-origin: right bottom; }
 
-.swiper-container-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
+.swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
   display: inline-block;
   margin: 0; }
 
-.swiper-container-vertical > .swiper-pagination-bullets {
+.swiper-vertical > .swiper-pagination-bullets {
   width: 100vh;
   transform: rotate(90deg);
   transform-origin: right bottom;

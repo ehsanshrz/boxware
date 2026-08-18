@@ -106,13 +106,17 @@
 
 
   function swiperInit() {
-    var swiper = new Swiper('.swiper-container', {
+    if (window.swiper && typeof window.swiper.destroy === 'function') {
+      window.swiper.destroy(true, true);
+    }
+
+    var swiper = new Swiper('.swiper', {
       spaceBetween: 0,
       centeredSlides: true,
-      autoplay: false,
-      mousewheel: true,
+      mousewheel: {
+        enabled: true
+      },
       speed: 0,
-      reverseDirection: true,
       effect:'fade',
       direction: 'vertical',
       hashNavigation: {
@@ -127,16 +131,16 @@
           var swiper = this;
 
           setTimeout(function() {
-            swiper.$el.addClass('initd');
+            $(swiper.el).addClass('initd');
           }, 100);
 
         },
         slideChange: function() {
 
           if (this.activeIndex == 0) {
-            this.$el.removeClass('greater-than-one');
+            $(this.el).removeClass('greater-than-one');
           } else {
-            this.$el.addClass('greater-than-one');
+            $(this.el).addClass('greater-than-one');
           }
 
           setTimeout(function() {
@@ -236,7 +240,9 @@
   };
 
   if ( window.WOW ) {
-    new WOW().init();
+    new WOW({
+      animateClass: 'animate__animated'
+    }).init();
   }
   
 
