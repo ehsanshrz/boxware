@@ -118,6 +118,9 @@
       },
       speed: 0,
       effect:'fade',
+      fadeEffect: {
+        crossFade: true,
+      },
       direction: 'vertical',
       hashNavigation: {
         replaceState: false
