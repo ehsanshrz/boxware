@@ -159,7 +159,9 @@
 
 @media only screen and (max-height: 800px) {
   #menu-controller {
-    right: 60px; } }
+    right: 60px; }
+  .case-study-label {
+    top: 22%; } }
 
 @media only screen and (max-height: 720px) {
   #menu-controller {
@@ -167,7 +169,7 @@
   .case-intro-wrapper {
     top: 25%; }
   .case-study-label {
-    top: 18%;
+    top: 22%;
     font-size: 12px;
     padding: 3px 35px; }
   .case-intro-wrapper h2 {
