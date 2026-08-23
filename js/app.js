@@ -105,6 +105,19 @@
   var animationEndEvent = whichAnimationEndEvent();
 
 
+  function playActiveSlideVideo(swiper) {
+    var slides = swiper.slides;
+    for (var i = 0; i < slides.length; i++) {
+      var video = slides[i].querySelector('video');
+      if (!video) continue;
+      if (i === swiper.activeIndex) {
+        video.play().catch(function() {});
+      } else {
+        video.pause();
+      }
+    }
+  }
+
   function swiperInit() {
     if (window.swiper && typeof window.swiper.destroy === 'function') {
       window.swiper.destroy(true, true);
@@ -135,6 +148,7 @@
 
           setTimeout(function() {
             $(swiper.el).addClass('initd');
+            playActiveSlideVideo(swiper);
           }, 100);
 
         },
@@ -165,6 +179,7 @@
         },
         slideNextTransitionEnd: function() {
 
+          playActiveSlideVideo(this);
         },
         slidePrevTransitionStart: function() {
 
@@ -173,6 +188,7 @@
         },
         slidePrevTransitionEnd: function() {
 
+          playActiveSlideVideo(this);
         }
       },
       pagination: {
